@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Walid Khan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            'primary-dark': '#4f46e5',
+            secondary: '#06b6d4',
+            accent: '#f97316',
+            light: '#f8fafc',
+            dark: '#0f172a',
+            'gray-light': '#f1f5f9',
+            gray: '#64748b',
+            'gray-dark': '#334155'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="dark-mode font-poppins">
+  <nav class="fixed w-full z-50 glass shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-xl font-bold text-gradient animated-gradient-text">Walid Khan</a>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Home
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="about.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            About
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="projects.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Projects
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="contact.html" class="text-primary font-medium transition-colors relative group">
+            Contact
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+          </a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="assets/cv.pdf" download="Walid_Khan_CV.pdf" id="download-cv" class="hidden md:inline-flex items-center px-4 py-2 btn-futuristic glow-border">
+            <i class="fas fa-download mr-2"></i> Download CV
+          </a>
+          
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-300 hover:bg-gray-800 transition-colors">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 glass md:hidden transition-transform duration-300">
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="index.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">About</a>
+      <a href="projects.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Projects</a>
+      <a href="contact.html" class="text-2xl font-medium text-primary transition-colors">Contact</a>
+      <a href="assets/cv.pdf" download="Walid_Khan_CV.pdf" class="px-6 py-3 btn-futuristic glow-border flex items-center">
+        <i class="fas fa-download mr-2"></i> Download CV
+      </a>
+      <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 text-gray-300">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <section class="pt-32 pb-20 bg-gray-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white section-heading text-3d">
+        Get In <span class="text-gradient animated-gradient-text">Touch</span>
+      </h2>
+      <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-xl font-semibold mb-6 text-white section-heading">Contact Information</h3>
+          <div class="space-y-6 mb-8" id="contact-info">
+            <!-- Contact info will be loaded dynamically -->
+          </div>
+          
+          <div class="flex space-x-4">
+            <a href="https://github.com/walid11111" class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center transition-all transform hover:scale-110 shadow-lg floating">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/walid-khan-aa691726a/" class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center transition-all transform hover:scale-110 shadow-lg floating">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center transition-all transform hover:scale-110 shadow-lg floating">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:swatwalid4142@gmail.com" class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center transition-all transform hover:scale-110 shadow-lg floating">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="glass rounded-2xl p-8 shadow-xl glow-border">
+          <h3 class="text-xl font-semibold mb-6 text-white section-heading">Send Me a Message</h3>
+          <form id="contact-form" class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+              <input type="text" id="name" name="name" required class="form-input w-full">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+              <input type="email" id="email" name="email" required class="form-input w-full">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+              <textarea id="message" name="message" rows="4" required class="form-input w-full"></textarea>
+            </div>
+            <button type="submit" class="w-full px-6 py-3 btn-futuristic glow-border">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2023 Walid Khan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+    <button id="chatbot-toggle" class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center shadow-lg transition-all duration-300 floating">
+      <i class="fas fa-robot text-2xl"></i>
+    </button>
+    
+    <div id="chatbot-window" class="absolute bottom-20 right-0 w-80 h-96 rounded-2xl flex flex-col overflow-hidden transform scale-0 opacity-0 transition-all duration-300 origin-bottom-right">
+      <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 flex justify-between items-center">
+        <h3 class="font-semibold">AI Assistant</h3>
+        <button id="chatbot-close" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto bg-gray-700">
+        <div class="chat-message bot">
+          <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+          <div class="message-text">Hello! I'm Walid's AI assistant. How can I help you today?</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-gray-800 border-t border-gray-700">
+        <div class="flex space-x-2">
+          <input type="text" id="chatbot-input" placeholder="Ask me anything..." class="form-input flex-1">
+          <button id="chatbot-send" class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="portfolio-data.js"></script>
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    // Contact page specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load contact information
+      const contactInfo = document.getElementById('contact-info');
+      const contact = portfolioData.contact;
+      
+      contactInfo.innerHTML = `
+        <div class="flex items-start space-x-5 p-4 glass rounded-2xl card-hover glow-border">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 floating">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-1">Location</h4>
+            <p class="text-gray-300">${contact.location}</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-5 p-4 glass rounded-2xl card-hover glow-border">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 floating">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-1">Phone</h4>
+            <p class="text-gray-300">${contact.phone}</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-5 p-4 glass rounded-2xl card-hover glow-border">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white flex-shrink-0 floating">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-white mb-1">Email</h4>
+            <p class="text-gray-300">${contact.email}</p>
+          </div>
+        </div>
+      `;
+      
+      // Form submission handling
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        };
+        
+        // Simple validation
+        if (!formData.name || !formData.email || !formData.message) {
+          alert('Please fill in all fields');
+          return;
+        }
+        
+        // In a real application, you would send this data to a server
+        console.log('Form submitted:', formData);
+        
+        // Show success message
+        alert('Thank you for your message! I will get back to you soon.');
+        
+        // Reset form
+        contactForm.reset();
+      });
+    });
+  </script>
+</body>
+</html>

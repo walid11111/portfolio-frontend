@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Walid Khan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            'primary-dark': '#4f46e5',
+            secondary: '#06b6d4',
+            accent: '#f97316',
+            light: '#f8fafc',
+            dark: '#0f172a',
+            'gray-light': '#f1f5f9',
+            gray: '#64748b',
+            'gray-dark': '#334155'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="dark-mode font-poppins">
+  <nav class="fixed w-full z-50 glass shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-xl font-bold text-gradient animated-gradient-text">Walid Khan</a>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Home
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="about.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            About
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="projects.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Projects
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="contact.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Contact
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <!-- Theme toggle button removed -->
+          
+          <a href="assets/cv.pdf" download="Walid_Khan_CV.pdf" class="hidden md:inline-flex items-center px-4 py-2 btn-futuristic glow-border">
+            <i class="fas fa-download mr-2"></i> Download CV
+          </a>
+          
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-300 hover:bg-gray-800 transition-colors">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 glass md:hidden transition-transform duration-300">
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="index.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">About</a>
+      <a href="projects.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Projects</a>
+      <a href="contact.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Contact</a>
+      <a href="#" class="px-6 py-3 btn-futuristic glow-border flex items-center">
+        <i class="fas fa-download mr-2"></i> Download CV
+      </a>
+      <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 text-gray-300">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <section class="pt-32 pb-20 bg-gray-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-white section-heading text-3d">
+        About <span class="text-gradient animated-gradient-text">Me</span>
+      </h2>
+      
+      <div class="mb-16" id="who-i-am-container">
+        <h3 class="text-2xl font-semibold mb-6 text-white section-heading">Who I Am</h3>
+        <!-- Who I Am content will be loaded dynamically -->
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-white section-heading">Expertise</h3>
+          <div class="grid grid-cols-2 gap-4" id="expertise-container">
+            <!-- Expertise items will be loaded dynamically -->
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-white section-heading">Education</h3>
+          <div class="space-y-6" id="education-container">
+            <!-- Education items will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-white section-heading">Skills</h3>
+          <div class="grid grid-cols-2 gap-4" id="skills-container">
+            <!-- Skills will be loaded dynamically -->
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-white section-heading">Work Experience</h3>
+          <div class="space-y-8" id="experience-container">
+            <!-- Experience items will be loaded dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2023 Walid Khan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+    <button id="chatbot-toggle" class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center shadow-lg transition-all duration-300 floating">
+      <i class="fas fa-robot text-2xl"></i>
+    </button>
+    
+    <div id="chatbot-window" class="absolute bottom-20 right-0 w-80 h-96 rounded-2xl flex flex-col overflow-hidden transform scale-0 opacity-0 transition-all duration-300 origin-bottom-right">
+      <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 flex justify-between items-center">
+        <h3 class="font-semibold">AI Assistant</h3>
+        <button id="chatbot-close" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto bg-gray-700">
+        <div class="chat-message bot">
+          <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+          <div class="message-text">Hello! I'm Walid's AI assistant. How can I help you today?</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-gray-800 border-t border-gray-700">
+        <div class="flex space-x-2">
+          <input type="text" id="chatbot-input" placeholder="Ask me anything..." class="form-input flex-1">
+          <button id="chatbot-send" class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="portfolio-data.js"></script>
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    // About page specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load Who I Am data
+      const whoIAmContainer = document.getElementById('who-i-am-container');
+      const whoIAmElement = document.createElement('div');
+      whoIAmElement.className = 'bg-gray-800 p-8 rounded-2xl shadow-lg card-hover glow-border';
+      whoIAmElement.innerHTML = portfolioData.about.whoIAm.description.map(desc => `
+        <p class="text-gray-300 mb-4 leading-relaxed">${desc}</p>
+      `).join('');
+      whoIAmContainer.appendChild(whoIAmElement);
+
+      // Load expertise data
+      const expertiseContainer = document.getElementById('expertise-container');
+      portfolioData.about.expertise.forEach(exp => {
+        const expElement = document.createElement('div');
+        expElement.className = 'bg-gray-800 p-6 rounded-xl shadow-md card-hover glow-border';
+        expElement.innerHTML = `
+          <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white mb-4 floating">
+            <i class="fas fa-star"></i>
+          </div>
+          <h4 class="font-semibold text-gray-300 mb-2">${exp.name}</h4>
+          <p class="text-gray-400 text-sm">${exp.description}</p>
+        `;
+        expertiseContainer.appendChild(expElement);
+      });
+
+      // Load education data
+      const educationContainer = document.getElementById('education-container');
+      portfolioData.education.forEach(edu => {
+        const eduElement = document.createElement('div');
+        eduElement.className = 'bg-gray-800 p-6 rounded-2xl shadow-lg card-hover glow-border';
+        eduElement.innerHTML = `
+          <div class="flex items-start mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white mr-4 flex-shrink-0 floating">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold text-primary mb-1">${edu.degree}</h4>
+              <p class="text-gray-300 font-medium mb-1">${edu.institution}</p>
+              <p class="text-gray-400 mb-2">${edu.period}</p>
+            </div>
+          </div>
+          <p class="text-gray-400">${edu.details}</p>
+        `;
+        educationContainer.appendChild(eduElement);
+      });
+      
+      // Load skills data
+      const skillsContainer = document.getElementById('skills-container');
+      portfolioData.skills.forEach(skill => {
+        const skillElement = document.createElement('div');
+        skillElement.className = 'bg-gray-800 p-6 rounded-xl shadow-md card-hover glow-border';
+        skillElement.innerHTML = `
+          <div class="flex justify-between items-center mb-3">
+            <span class="font-semibold text-gray-300">${skill.name}</span>
+            <span class="text-sm text-primary font-medium">${skill.level}%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-2.5">
+            <div class="bg-gradient-to-r from-primary to-secondary h-2.5 rounded-full skill-bar" style="width: ${skill.level}%"></div>
+          </div>
+        `;
+        skillsContainer.appendChild(skillElement);
+      });
+      
+      // Load experience data
+      const experienceContainer = document.getElementById('experience-container');
+      portfolioData.experience.forEach(exp => {
+        const expElement = document.createElement('div');
+        expElement.className = 'border-l-4 border-primary pl-6 py-2 relative';
+        expElement.innerHTML = `
+          <div class="absolute -left-2.5 top-4 w-4 h-4 rounded-full bg-gradient-to-r from-primary to-secondary floating"></div>
+          <h4 class="text-xl font-semibold text-white mb-1">${exp.role}</h4>
+          <p class="text-primary font-medium mb-2">${exp.company} • ${exp.period}</p>
+          <p class="text-gray-300">${exp.description}</p>
+        `;
+        experienceContainer.appendChild(expElement);
+      });
+    });
+  </script>
+</body>
+</html>

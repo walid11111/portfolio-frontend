@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Walid Khan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            'primary-dark': '#4f46e5',
+            secondary: '#06b6d4',
+            accent: '#f97316',
+            light: '#f8fafc',
+            dark: '#0f172a',
+            'gray-light': '#f1f5f9',
+            gray: '#64748b',
+            'gray-dark': '#334155'
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="dark-mode font-poppins">
+  <nav class="fixed w-full z-50 glass shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-xl font-bold text-gradient animated-gradient-text">Walid Khan</a>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Home
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="about.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            About
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="projects.html" class="text-primary font-medium transition-colors relative group">
+            Projects
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
+          </a>
+          <a href="contact.html" class="text-gray-300 hover:text-primary font-medium transition-colors relative group">
+            Contact
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <a href="assets/cv.pdf" download="Walid_Khan_CV.pdf" class="px-6 py-3 btn-futuristic glow-border flex items-center">
+            <i class="fas fa-download mr-2"></i> Download CV
+          </a>
+          
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-300 hover:bg-gray-800 transition-colors">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 glass md:hidden transition-transform duration-300">
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="index.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">About</a>
+      <a href="projects.html" class="text-2xl font-medium text-primary transition-colors">Projects</a>
+      <a href="contact.html" class="text-2xl font-medium text-gray-300 hover:text-primary transition-colors">Contact</a>
+      <a href="assets/cv.pdf" download="Walid_Khan_CV.pdf" class="px-6 py-3 btn-futuristic glow-border flex items-center">
+        <i class="fas fa-download mr-2"></i> Download CV
+      </a>
+      <button id="close-mobile-menu" class="absolute top-4 right-4 p-2 text-gray-300">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+  </div>
+
+  <section class="pt-32 pb-20 bg-gray-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-white section-heading text-3d">
+        My <span class="text-gradient animated-gradient-text">Projects</span>
+      </h2>
+      <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+        Here are some of my recent projects that showcase my skills in AI, machine learning, and software development.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4 mb-12" id="project-filters">
+        <button class="px-4 py-2 rounded-full filter-btn active glow-border" data-filter="all">All</button>
+        <button class="px-4 py-2 rounded-full filter-btn glow-border" data-filter="ai-ml">AI/ML</button>
+        <button class="px-4 py-2 rounded-full filter-btn glow-border" data-filter="nlp">NLP</button>
+        <button class="px-4 py-2 rounded-full filter-btn glow-border" data-filter="computer-vision">Computer Vision</button>
+        <button class="px-4 py-2 rounded-full filter-btn glow-border" data-filter="web-apps">Web Apps</button>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+        <!-- Project cards will be loaded dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2023 Walid Khan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+    <button id="chatbot-toggle" class="w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center shadow-lg transition-all duration-300 floating">
+      <i class="fas fa-robot text-2xl"></i>
+    </button>
+    
+    <div id="chatbot-window" class="absolute bottom-20 right-0 w-80 h-96 rounded-2xl flex flex-col overflow-hidden transform scale-0 opacity-0 transition-all duration-300 origin-bottom-right">
+      <div class="bg-gradient-to-r from-primary to-secondary text-white p-4 flex justify-between items-center">
+        <h3 class="font-semibold">AI Assistant</h3>
+        <button id="chatbot-close" class="text-white hover:text-blue-200 transition-colors">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto bg-gray-700">
+        <div class="chat-message bot">
+          <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+          <div class="message-text">Hello! I'm Walid's AI assistant. How can I help you today?</div>
+        </div>
+      </div>
+      
+      <div class="p-3 bg-gray-800 border-t border-gray-700">
+        <div class="flex space-x-2">
+          <input type="text" id="chatbot-input" placeholder="Ask me anything..." class="form-input flex-1">
+          <button id="chatbot-send" class="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary text-white flex items-center justify-center hover:opacity-90 transition-opacity">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="portfolio-data.js"></script>
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+    // Projects page specific JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectsContainer = document.getElementById('projects-container');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      
+      // Load all projects initially
+      renderProjects('all');
+      
+      // Add event listeners to filter buttons
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Update active state
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter projects
+          const filter = this.getAttribute('data-filter');
+          renderProjects(filter);
+        });
+      });
+      
+      function renderProjects(filter) {
+        // Clear container
+        projectsContainer.innerHTML = '';
+        
+        // Filter projects
+        const filteredProjects = filter === 'all'
+          ? portfolioData.projects
+          : portfolioData.projects.filter(project => project.category === filter);
+        
+        // Render projects
+        filteredProjects.forEach(project => {
+          const projectElement = document.createElement('div');
+          projectElement.className = 'bg-gray-800 rounded-2xl overflow-hidden shadow-xl card-hover glow-border';
+          projectElement.innerHTML = `
+            <div class="h-48 overflow-hidden">
+              <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-white mb-3">${project.title}</h3>
+              <p class="text-gray-300 mb-4">${project.description}</p>
+              <div class="flex flex-wrap gap-2 mb-5">
+                ${project.tags.map(tag => `<span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">${tag}</span>`).join('')}
+              </div>
+              <a href="${project.link}" target="_blank" class="inline-flex items-center text-primary font-medium group">
+                View Project <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              </a>
+            </div>
+          `;
+          projectsContainer.appendChild(projectElement);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
