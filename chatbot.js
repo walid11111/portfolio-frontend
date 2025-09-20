@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle streamed response from backend API
   async function getStreamedBotResponse(userMessage) {
     try {
-      const response = await fetch('https://portfolio-backend-psi-drab.vercel.app/chat', {
+      const response = await fetch('http://localhost:8000/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: userMessage })
